@@ -345,6 +345,21 @@ div.chip-5-placed {
   margin: 0 auto;
 }
 
+.button-delete {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 18px; /* Make text bigger */
+  padding: 12px 24px; /* Increase button size */
+  border-radius: 12px; /* Rounded corners */
+}
+
 .winnerHistory { 
   vertical-align:top;
   width: 400px;
@@ -385,7 +400,7 @@ div.chip-5-placed {
   height: 131px;
   background: url(assets/racetrack.png) no-repeat center center;
   background-size: 468px 131px;
-  margin: 0 auto;
+  margin-top: 20px;
   position: relative;
   overflow: visible;
   touch-action: none;

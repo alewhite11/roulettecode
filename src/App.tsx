@@ -6,6 +6,7 @@ import {
 import Wheel from "./Wheel";
 import Board from "./Board";
 import Racetrack from "./Racetrack";
+import "./styles.css"
 
 function App() {
   const rouletteWheelNumbers = [
@@ -77,7 +78,14 @@ function App() {
     });
   };
 
-  
+  const handleDeleteLast = () => {
+    if (state.history.length > 0) {
+      setState((prevState) => ({
+        ...prevState,
+        history: prevState.history.slice(1),
+      }));
+    }
+  };
 
   const handleCellClick = (item: number) => {
     startSpin(item)
@@ -169,6 +177,9 @@ function App() {
                       }
                     })}
                   </div>
+                  <button onClick={handleDeleteLast} className="button-delete">
+                    Delete Last Entry
+                  </button>
                 </td>
               </tr>
               <tr>
